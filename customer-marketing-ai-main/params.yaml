@@ -1,0 +1,67 @@
+{
+  "paths": {
+    "raw_data": "data/raw/marketing_campaign.csv",
+    "processed_data": "data/processed/marketing_campaign_clean.csv",
+    "clustered_data": "data/processed/marketing_campaign_clustered.csv",
+    "baseline_results": "reports/baseline_results.csv",
+    "hybrid_results": "reports/hybrid_results.csv",
+    "metrics_summary": "reports/metrics_summary.json",
+    "silhouette_scores": "reports/silhouette_scores.csv",
+    "cluster_summary": "reports/cluster_summary.csv",
+    "cluster_pca_plot": "reports/cluster_pca.png",
+    "stability_summary": "reports/stability_summary.csv"
+  },
+  "preprocessing": {
+    "current_year": 2026,
+    "min_age": 18,
+    "max_age": 100,
+    "income_lower_quantile": 0.01,
+    "income_upper_quantile": 0.99
+  },
+  "features": {
+    "cluster_numeric": [
+      "Income",
+      "Age",
+      "Children",
+      "TotalSpending",
+      "TotalPurchases"
+    ],
+    "categorical": [
+      "Education",
+      "Marital_Status"
+    ],
+    "baseline_model": [
+      "Income",
+      "Age",
+      "Children",
+      "TotalSpending",
+      "TotalPurchases"
+    ],
+    "hybrid_model": [
+      "Income",
+      "Age",
+      "Children",
+      "TotalSpending",
+      "TotalPurchases",
+      "ClusterID"
+    ]
+  },
+  "clustering": {
+    "k_min": 2,
+    "k_max": 7,
+    "random_state": 42,
+    "n_init": 10
+  },
+  "training": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "batch_size_train": 64,
+    "batch_size_test": 256,
+    "learning_rate": 0.001,
+    "epochs": 20,
+    "hidden_dims": [32, 16],
+    "dropout": 0.2,
+    "classification_threshold": 0.5,
+    "stability_seeds": [7, 21, 42, 84, 123]
+  }
+}

@@ -1,0 +1,3 @@
+ClusterID,Count,Income_mean,Age_mean,Children_mean,IsParent_rate,TotalSpending_mean,TotalPurchases_mean,ResponseRate,Interpretation,ResponseRatePct
+0,965,69703.68,59.63,0.56,0.5,1169.01,19.3,0.21,"high spending, higher income, more responsive",21.0
+1,1202,37380.74,55.22,1.27,0.89,152.59,7.16,0.1,"lower spending, more modest income, less responsive",10.0
